@@ -6,6 +6,8 @@ import Web3 from 'web3'
 // Import Images + CSS
 import twitter from '../images/socials/twitter.svg'
 import instagram from '../images/socials/instagram.svg'
+import discord from '../images/socials/discord.svg'
+import telegram from '../images/socials/telegram.svg'
 import opensea from '../images/socials/opensea.svg'
 import showcase from '../images/showcase.png'
 import preview from '../images/preview.gif'
@@ -186,10 +188,16 @@ function App() {
 								<img src={twitter} alt="Twitter" />
 							</a>
 							<a
+								href="https://t.me/BearBadges"
+								target='_blank'
+								className='circle flex button'>
+								<img src={telegram} alt="Telegram" />
+							</a>
+							<a
 								href="https://discord.gg/GNzKNb9cBk"
 								target='_blank'
 								className='circle flex button'>
-								<img src={instagram} alt="Instagram" />
+								<img src={discord} alt="Instagram" />
 							</a>
 							<a
 								href={`${openseaURL}/collection/bear-badges`}
