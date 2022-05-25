@@ -34,6 +34,12 @@ body {
     align-items: center;
 }
 
+.flex2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 nav {
     height: 10vh;
 }
@@ -49,6 +55,7 @@ main {
 .welcome {
     min-height: 90vh;
     scroll-snap-align: start;
+    
 }
 
 .about {
@@ -72,6 +79,7 @@ h2 {
     font-weight: 700;
     font-size: clamp(2rem, 5vw, 5rem);
     padding-left: .8em;
+    
 }
 
 h4 {
@@ -79,11 +87,13 @@ h4 {
     font-weight: 700;
     font-size: clamp(2rem, 5vw, 5rem);
     padding-left: 2em;
+    
 }
 
 
 h3 {
     margin: 1em auto 0;
+    
 }
 
 .sub-header {
@@ -104,6 +114,13 @@ h3 {
     font-size: clamp(1rem, 2vw, 1.15rem);
     font-weight: 300;
     padding: 1.15em;
+}
+
+.text2, ul {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    font-weight: 300;
+    padding: 1.15em;
+    
 }
 
 /* LINK / BUTTON STYLES */
@@ -136,6 +153,7 @@ a:hover {
     font-weight: 700;
 
     transition: all 500ms ease;
+    
     
 }
 
