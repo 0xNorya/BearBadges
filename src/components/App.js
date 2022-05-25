@@ -19,6 +19,7 @@ import OpenPunks from '../abis/BearBadges.json'
 import config from '../config.json'
 
 function App() {
+	// const mintValue = openPunks.methods.cost().call()
 	const [web3, setWeb3] = useState(null)
 	const [openPunks, setOpenPunks] = useState(null)
 
@@ -50,6 +51,7 @@ function App() {
 			const maxSupply = await openPunks.methods.maxSupply().call()
 			const totalSupply = await openPunks.methods.totalSupply().call()
 			setSupplyAvailable(maxSupply - totalSupply)
+			const mintValue = await openPunks.methods.cost().call()
 
 			const allowMintingAfter = await openPunks.methods.allowMintingAfter().call()
 			const timeDeployed = await openPunks.methods.timeDeployed().call()
@@ -130,8 +132,9 @@ function App() {
 		if (openPunks && account) {
 			setIsMinting(true)
 			setIsError(false)
+			const mintValue = await openPunks.methods.cost().call()
 
-			await openPunks.methods.mint(1).send({ from: account, value: 0 })
+			await openPunks.methods.mint(1).send({ from: account, value: mintValue })
 				.on('confirmation', async () => {
 					const maxSupply = await openPunks.methods.maxSupply().call()
 					const totalSupply = await openPunks.methods.totalSupply().call()
