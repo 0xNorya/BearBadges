@@ -136,6 +136,26 @@ a:hover {
     font-weight: 700;
 
     transition: all 500ms ease;
+    
+}
+
+.button2 {
+    display: inline-block;
+    padding: .75em 1.5em;
+    margin: .5em auto;
+
+    background: linear-gradient(to left, var(--clr-button-bg-1), var(--clr-button-bg-2));
+    color: var(--clr-text-dark);
+
+    border: none;
+    border-radius: .5em;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+
+    transition: all 500ms ease;
+    
 }
 
 .nav-button {
@@ -147,6 +167,7 @@ a:hover {
     max-width: 225px;
 
     overflow: hidden;
+    
 }
 
 .button:hover {
@@ -167,6 +188,7 @@ a:hover {
 .showcase {
     width: 250px;
     height: auto;
+    /* margin-top: -80%; */
 }
 
 /* Social Media Icon */

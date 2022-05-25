@@ -186,13 +186,13 @@ function App() {
 								<img src={twitter} alt="Twitter" />
 							</a>
 							<a
-								href="#"
+								href="https://discord.gg/GNzKNb9cBk"
 								target='_blank'
 								className='circle flex button'>
 								<img src={instagram} alt="Instagram" />
 							</a>
 							<a
-								href={`${openseaURL}/collection/${config.PROJECT_NAME}`}
+								href={`${openseaURL}/collection/bear-badges`}
 								target='_blank'
 								className='circle flex button'>
 								<img src={opensea} alt="Opensea" />
@@ -202,7 +202,7 @@ function App() {
 
 					<Row className='flex m-3'>
 						<Col md={5} lg={4} xl={5} xxl={4} className='text-center'>
-						<button onClick={mintNFTHandler} className='button mint-button mt-3'>Mint</button>
+						<button2 onClick={mintNFTHandler} className='button mint-button mt-3'>Mint <br></br> (Price: 25 Matic)</button2>
 							<img
 								src={preview}
 								alt="Bear Badges"
@@ -245,13 +245,13 @@ function App() {
 									{isMinting ? (
 										<Spinner animation="border" className='p-3 m-2' />
 									) : (
-										<button onClick={mintNFTHandler} className='button mint-button mt-3'>Mint</button>
+										<button onClick={mintNFTHandler} className='button mint-button mt-3'>Mint <br></br> (Price: 25 Matic)</button>
 									)}
 
 									{ownerOf.length > 0 &&
 										<p><small>View your NFT on
 											<a
-												href={`${openseaURL}/assets/${openPunks._address}/${ownerOf[0]}`}
+												href={`https://opensea.io/assets/matic/${openPunks._address}/${ownerOf[0]}`}
 												target='_blank'
 												style={{ display: 'inline-block', marginLeft: '3px' }}>
 												OpenSea
