@@ -1,4 +1,4 @@
-# Open Punks
+# Bear Badges
 
 ## Technology Stack & Tools
 
@@ -84,8 +84,8 @@ Create a .env file in the root directory of your project, and fill in the follow
 - For Polygon Mainnet: `truffle migrate --reset --network testmatic`
 
 ### 3. Verify your contracts
-- For Rinkeby testnet: `truffle run verify OpenPunks --network rinkeby`
-- For Polygon Mainnet: `truffle run verify OpenPunks --network matic`
+- For Rinkeby testnet: `truffle run verify BearBadges --network rinkeby`
+- For Polygon Mainnet: `truffle run verify BearBadges --network matic`
 truffle run verify BearBadges --network testmatic
 
 ## Preparing for Frontend Deployment
