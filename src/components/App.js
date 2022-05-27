@@ -26,6 +26,8 @@ function App() {
 	const [openPunks, setOpenPunks] = useState(null)
 
 	const [supplyAvailable, setSupplyAvailable] = useState(0)
+	const [totalSupply, setTotalSupply] = useState(null)
+	const [maxSupply, setMaxSupply] = useState(null)
 
 	const [account, setAccount] = useState(null)
 	const [networkId, setNetworkId] = useState(null)
@@ -53,6 +55,8 @@ function App() {
 			const maxSupply = await openPunks.methods.maxSupply().call()
 			const totalSupply = await openPunks.methods.totalSupply().call()
 			setSupplyAvailable(maxSupply - totalSupply)
+			setTotalSupply(totalSupply)
+			setMaxSupply(maxSupply)
 			const mintValue = await openPunks.methods.cost().call()
 
 			const allowMintingAfter = await openPunks.methods.allowMintingAfter().call()
@@ -141,6 +145,8 @@ function App() {
 					const maxSupply = await openPunks.methods.maxSupply().call()
 					const totalSupply = await openPunks.methods.totalSupply().call()
 					setSupplyAvailable(maxSupply - totalSupply)
+					setTotalSupply(totalSupply)
+					setMaxSupply(maxSupply)
 
 					const ownerOf = await openPunks.methods.walletOfOwner(account).call()
 					setOwnerOf(ownerOf)
@@ -207,14 +213,17 @@ function App() {
 							</a>
 						</Col>
 					</Row>
+					
 
 					<Row className='flex m-3'>
 						<Col md={5} lg={4} xl={5} xxl={4} className='text-center'>
+						
 						<button2 onClick={mintNFTHandler} className='button mint-button mt-3'>Mint <br></br> (Price: 25 Matic)</button2>
+						<p className='text3 my-0 p-0 mb-0 pb-0'>{`Items Minted: ${totalSupply} / ${maxSupply}`}</p>
 							<img
 								src={preview}
 								alt="Bear Badges"
-								className='showcase'
+								className='showcase my-0 p-0 mb-0 pb-0'
 							/>
 						</Col>
 						<Col md={5} lg={4} xl={5} xxl={4}>
@@ -245,9 +254,9 @@ function App() {
 								<div>
 									<h3>Owning a Bear Badge you will:</h3>
 									<ul>
-										<li>Own a Badge of honor forever proving your experience as a seasoned crypto veteran</li>
-										<li>Be granted access to our special community of experienced traders/developers to make the most out of the bear market in preparation for the 2024 bitcoin halving </li>
-										<li>Have a Special Pleasant Surprise in 2024 at the Bitcoin halving ;)</li>
+										<li><p className='text'>Own a Badge of honor forever proving your experience as a seasoned crypto veteran</p></li>
+										<li><p className='text'>Be granted access to our special community of experienced traders/developers to make the most out of the bear market in preparation for the 2024 bitcoin halving </p></li>
+										<li><p className='text'>Have a Special Pleasant Surprise in 2024 at the Bitcoin halving ;)</p></li>
 									</ul>
 
 									{isMinting ? (
@@ -278,6 +287,19 @@ function App() {
 									target='_blank'
 									className='text-center'>
 									{openPunks._address}
+								</a>
+							}
+						</Col>
+					</Row>
+
+					<Row style={{ marginTop: "100px" }}>
+						<Col>
+							{openPunks &&
+								<a
+									href={`${explorerURL}/address/${openPunks._address}`}
+									target='_blank'
+									className='text-center'>
+									{" "}
 								</a>
 							}
 						</Col>

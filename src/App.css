@@ -38,6 +38,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 nav {
@@ -114,12 +115,29 @@ h3 {
     font-size: clamp(1rem, 2vw, 1.15rem);
     font-weight: 300;
     padding: 1.15em;
+    /* margin-top: 0%; */
 }
 
 .text2, ul {
     font-size: clamp(1rem, 2vw, 1.15rem);
     font-weight: 300;
     padding: 1.15em;
+    
+}
+
+.text3, ul {
+    font-size: clamp(2rem, 4vw, 2.3rem);
+    font-weight: 500;
+    padding: 1.15em;
+    top: -15px;
+    
+}
+
+.text4, ul {
+    font-size: clamp(2rem, 4vw, 2.3rem);
+    font-weight: 500;
+    padding: 1.15em;
+    top: -15px;
     
 }
 
@@ -206,7 +224,7 @@ a:hover {
 .showcase {
     width: 250px;
     height: auto;
-    /* margin-top: -80%; */
+    /* margin-top: -20; */
 }
 
 /* Social Media Icon */
