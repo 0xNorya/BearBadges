@@ -185,6 +185,7 @@ function App() {
 						<Col xs={12} md={12} lg={8} xxl={8}>
 							<h1>Bear Badges</h1>
 							<p className='sub-header'>Minting Live Now!</p>
+							
 						</Col>
 						<Col className='flex social-icons'>
 							<a

@@ -13,6 +13,16 @@ const Navbar = ({ web3Handler, account, explorerURL }) => {
                 Bear Badges
             </a>
 
+            <a
+                className="navbar-brand col-sm-0 col-md-0 mr-0 mx-4"
+                
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <p src={logo} className="App-logo" alt="logo" />
+                Make Sure You Are Connected To Polygon Mainnet Then Reload The Page
+            </a>
+
             {account ? (
                 <a
                     href={`${explorerURL}/address/${account}`}
