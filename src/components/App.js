@@ -5,6 +5,7 @@ import Web3 from 'web3'
 
 // Import Images + CSS
 import twitter from '../images/socials/twitter.svg'
+import nfti from '../images/socials/NFT0.svg'
 import instagram from '../images/socials/instagram.svg'
 import discord from '../images/socials/discord.svg'
 import telegram from '../images/socials/telegram.svg'
@@ -211,6 +212,12 @@ function App() {
 								target='_blank'
 								className='circle flex button'>
 								<img src={opensea} alt="Opensea" />
+							</a>
+							<a
+								href={`https://nftcalendar.io/event/bear-badges/`}
+								target='_blank'
+								className='circle flex button'>
+								<img src={nfti} alt="NFTcalendar" />
 							</a>
 						</Col>
 					</Row>
