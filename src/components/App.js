@@ -226,7 +226,7 @@ function App() {
 					<Row className='flex m-3'>
 						<Col md={5} lg={4} xl={5} xxl={4} className='text-center'>
 						
-						<button2 onClick={mintNFTHandler} className='button mint-button mt-3'>Mint <br></br> (Price: 25 Matic)</button2>
+						<button2 onClick={mintNFTHandler} className='button mint-button mt-3'>Mint <br></br> (Price: FREE for 48 Hours!)</button2>
 						<p className='text3 my-0 p-0 mb-0 pb-0'>{`Items Minted: ${totalSupply} / ${maxSupply}`}</p>
 							<img
 								src={preview}
