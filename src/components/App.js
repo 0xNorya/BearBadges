@@ -270,7 +270,7 @@ function App() {
 									{isMinting ? (
 										<Spinner animation="border" className='p-3 m-2' />
 									) : (
-										<button onClick={mintNFTHandler} className='button mint-button mt-3'>Mint <br></br> (Price: 25 Matic)</button>
+										<button onClick={mintNFTHandler} className='button mint-button mt-3'>Mint <br></br> (Price: FREE for 48 Hours!)</button>
 									)}
 
 									{ownerOf.length > 0 &&
